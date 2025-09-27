@@ -17,21 +17,21 @@ export default function Footer() {
             href="https://x.com/StinkWalkerOfc"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
             data-testid="footer-twitter"
           >
             <SiX className="text-2xl" />
           </a>
           <a
             href="#"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
             data-testid="footer-telegram"
           >
             <MessageCircle className="text-2xl" />
           </a>
           <a
             href="#"
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
             data-testid="footer-discord"
           >
             <Users className="text-2xl" />
