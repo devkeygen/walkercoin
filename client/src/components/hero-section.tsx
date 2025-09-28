@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { SiX, SiDiscord, SiTelegram } from "react-icons/si";
 import { MessageCircle, Users } from "lucide-react";
 import walkerMainImage from "@assets/photo_1_2025-09-28_00-15-58_1759037506774.jpg";
+import backgroundImage from "@assets/BACKGROUND.jpg";
 import { useState, useEffect } from "react";
 
 const taglines = [
@@ -45,9 +46,19 @@ function RotatingTaglines() {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-texture" data-testid="hero-section">
+    <section className="relative min-h-screen flex items-center justify-center" data-testid="hero-section">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          opacity: 0.15,
+          filter: 'blur(1px)'
+        }}
+      />
+      
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-10">
         <motion.div 
           className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl"
           animate={{ 
@@ -115,7 +126,7 @@ export default function HeroSection() {
         ></motion.div>
       </div>
 
-      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+      <div className="relative z-20 text-center px-4 max-w-6xl mx-auto">
         {/* Achievement Badges */}
         <motion.div
           className="mb-6 flex flex-wrap justify-center gap-3"
@@ -311,7 +322,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.9 }}
         >
           <motion.a
-            href="#"
+            href="https://x.com/StinkWalkerOfc"
             className="text-3xl hover:text-primary transition-colors duration-300"
             aria-label="Twitter"
             whileHover={{ scale: 1.2, rotate: 5 }}

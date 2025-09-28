@@ -80,7 +80,7 @@ export default function LoreSection() {
                 transition={{ duration: 1, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <span className="text-primary font-bold">The Tokenized Stinkwalker</span> isn't just a meme—it's <span className="text-yellow-400 font-semibold">history</span>. 
+                <span className="text-primary font-bold">The Tokenized Stinkwalker</span> isn't just a meme it's <span className="text-yellow-400 font-semibold">history</span>. 
                 He is officially the <span className="text-primary font-bold glow-text">first cat on Plasma Chain</span>, immortalized as a digital IP that fans can collect, trade, and rally behind.
               </motion.p>
               
@@ -217,7 +217,7 @@ export default function LoreSection() {
           >
             <Crown className="mx-auto mb-4 text-yellow-400" size={48} />
             <h4 className="text-xl font-bold text-yellow-400 mb-2">Historical First</h4>
-            <p className="text-sm text-foreground/80">Pioneer cat breaking barriers in blockchain history</p>
+            <p className="text-sm text-foreground/80">Pioneer cat breaking barriers in plasma history</p>
           </motion.div>
 
           <motion.div 
