@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SiX } from "react-icons/si";
 import { MessageCircle, Users } from "lucide-react";
+import walkerMainImage from "@assets/photo_1_2025-09-28_00-15-58_1759037506774.jpg";
 
 export default function HeroSection() {
   return (
@@ -37,14 +38,14 @@ export default function HeroSection() {
         >
           <div className="relative floating">
             <div 
-              className="w-80 h-80 rounded-full border-4 border-primary/50 pulse-glow bg-gradient-to-br from-primary/20 to-secondary/40 flex items-center justify-center"
-              data-testid="character-placeholder"
+              className="w-80 h-80 rounded-full border-4 border-primary/50 pulse-glow bg-gradient-to-br from-primary/20 to-secondary/40 flex items-center justify-center overflow-hidden"
+              data-testid="character-main"
             >
-              <div className="text-center">
-                <div className="text-8xl mb-4">🚶‍♂️</div>
-                <div className="text-lg font-bold text-primary">WALKER</div>
-                <div className="text-sm text-muted-foreground">Character Illustration</div>
-              </div>
+              <img 
+                src={walkerMainImage} 
+                alt="WALKER Character" 
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
             <div className="absolute inset-0 rounded-full bg-gradient-to-t from-primary/20 to-transparent"></div>
           </div>

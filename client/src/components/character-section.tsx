@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import spaceWalkerImage from "@assets/photo_2_2025-09-28_00-15-58_1759037506776.jpg";
+import natureWalkerImage from "@assets/photo_3_2025-09-28_00-15-58_1759037506777.jpg";
 
 export default function CharacterSection() {
   return (
@@ -44,27 +46,39 @@ export default function CharacterSection() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div 
-                className="w-full h-64 bg-gradient-to-br from-primary/30 to-secondary/50 rounded-lg border border-border flex items-center justify-center"
-                data-testid="mystical-forest-placeholder"
+              {/* Purple Space Cat with Bottom-to-Top Animation */}
+              <motion.div 
+                className="w-full h-64 rounded-lg border border-border overflow-hidden relative"
+                data-testid="space-walker"
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.3 }}
               >
-                <div className="text-center text-muted-foreground">
-                  <div className="text-4xl mb-2">🌲</div>
-                  <div className="text-sm">Mystical Forest Scene</div>
-                  <div className="text-xs">Ethereal lighting & glowing orbs</div>
-                </div>
-              </div>
+                <img 
+                  src={spaceWalkerImage} 
+                  alt="Space Walker" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              </motion.div>
               
-              <div 
-                className="w-full h-48 bg-gradient-to-br from-accent/20 to-primary/30 rounded-lg border border-border flex items-center justify-center"
-                data-testid="ancient-stones-placeholder"
+              {/* Third Cat Image */}
+              <motion.div 
+                className="w-full h-48 rounded-lg border border-border overflow-hidden relative"
+                data-testid="nature-walker"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
               >
-                <div className="text-center text-muted-foreground">
-                  <div className="text-3xl mb-2">🗿</div>
-                  <div className="text-sm">Ancient Stone Circle</div>
-                  <div className="text-xs">Mysterious runes in misty atmosphere</div>
-                </div>
-              </div>
+                <img 
+                  src={natureWalkerImage} 
+                  alt="Nature Walker" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent"></div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
