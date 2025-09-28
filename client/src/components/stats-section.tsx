@@ -25,7 +25,7 @@ export default function StatsSection() {
               viewport={{ once: true }}
               data-testid="stat-supply"
             >
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">∞</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1B</div>
               <div className="text-muted-foreground">Total Supply</div>
             </motion.div>
             
